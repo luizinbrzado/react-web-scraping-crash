@@ -1,0 +1,11 @@
+.por-hora {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    max-width: calc((4 + 1) * 8rem);
+
+    span {
+        width: 4rem;
+        color: #fefefe;
+    }
+}
