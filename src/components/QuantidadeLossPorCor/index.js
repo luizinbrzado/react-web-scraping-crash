@@ -4,168 +4,170 @@ import './style.scss';
 
 const QuantidadeLossPorCor = ({ resultados }) => {
 
-    var branco = 0;
-    var vermelho = 0;
-    var preto = 0;
-
-    var brancoSeq = [];
-    var vermelhoSeq = [];
-    var pretoSeq = [];
-
-    var vermelhoUm = 0;
-    var vermelhoDois = 0;
-    var vermelhoTres = 0;
-    var vermelhoQuatro = 0;
-    var vermelhoCinco = 0;
-    var vermelhoSeis = 0;
-    var vermelhoSete = 0;
-    var vermelhoOito = 0;
-    var vermelhoNove = 0;
-    var vermelhoDez = 0;
-    var vermelhoOnze = 0;
-    var vermelhoDoze = 0;
-    var vermelhoTreze = 0;
-    var vermelhoQuatorze = 0;
-    var vermelhoQuinze = 0;
-    var vermelhoDezesseis = 0;
-    var vermelhoDezessete = 0;
-    var vermelhoDezoito = 0;
-    var vermelhoDezenove = 0;
-    var vermelhoVinte = 0;
+    var badUm = 0;
+    var badDois = 0;
+    var badTres = 0;
+    var badQuatro = 0;
+    var badCinco = 0;
+    var badSeis = 0;
+    var badSete = 0;
+    var badOito = 0;
+    var badNove = 0;
+    var badDez = 0;
+    var badOnze = 0;
+    var badDoze = 0;
+    var badTreze = 0;
+    var badQuatorze = 0;
+    var badQuinze = 0;
+    var badDezesseis = 0;
+    var badDezessete = 0;
+    var badDezoito = 0;
+    var badDezenove = 0;
+    var badVinte = 0;
 
 
-    var pretoUm = 0;
-    var pretoDois = 0;
-    var pretoTres = 0;
-    var pretoQuatro = 0;
-    var pretoCinco = 0;
-    var pretoSeis = 0;
-    var pretoSete = 0;
-    var pretoOito = 0;
-    var pretoNove = 0;
-    var pretoDez = 0;
-    var pretoOnze = 0;
-    var pretoDoze = 0;
-    var pretoTreze = 0;
-    var pretoQuatorze = 0;
-    var pretoQuinze = 0;
-    var pretoDezesseis = 0;
-    var pretoDezessete = 0;
-    var pretoDezoito = 0;
-    var pretoDezenove = 0;
-    var pretoVinte = 0;
+    var goodUm = 0;
+    var goodDois = 0;
+    var goodTres = 0;
+    var goodQuatro = 0;
+    var goodCinco = 0;
+    var goodSeis = 0;
+    var goodSete = 0;
+    var goodOito = 0;
+    var goodNove = 0;
+    var goodDez = 0;
+    var goodOnze = 0;
+    var goodDoze = 0;
+    var goodTreze = 0;
+    var goodQuatorze = 0;
+    var goodQuinze = 0;
+    var goodDezesseis = 0;
+    var goodDezessete = 0;
+    var goodDezoito = 0;
+    var goodDezenove = 0;
+    var goodVinte = 0;
 
-    resultados.map((e, i) => {
-        var valor = parseInt(e.result);
-
-        if (valor === 0) {
-            brancoSeq.unshift(branco);
-            vermelho++;
-            preto++;
-            branco = 0;
-        } else if (valor > 0 && valor < 8) {
-            branco++;
-            vermelhoSeq.unshift(vermelho);
-            preto++;
-            vermelho = 0;
-        } else if (valor >= 8) {
-            branco++;
-            vermelho++;
-            pretoSeq.unshift(preto);
-            preto = 0;
+    resultados.reverse().map((e, i) => {
+        if (e.result <= 2) {
+            badUm++
+            if (resultados[i - 1] !== undefined && resultados[i - 1].result <= 2) {
+                badDois++;
+                if (resultados[i - 2] !== undefined && resultados[i - 2].result <= 2) {
+                    badTres++;
+                    if (resultados[i - 3] !== undefined && resultados[i - 3].result <= 2) {
+                        badQuatro++;
+                        if (resultados[i - 4] !== undefined && resultados[i - 4].result <= 2) {
+                            badCinco++;
+                            if (resultados[i - 5] !== undefined && resultados[i - 5].result <= 2) {
+                                badSeis++;
+                                if (resultados[i - 6] !== undefined && resultados[i - 6].result <= 2) {
+                                    badSete++;
+                                    if (resultados[i - 7] !== undefined && resultados[i - 7].result <= 2) {
+                                        badOito++;
+                                        if (resultados[i - 8] !== undefined && resultados[i - 8].result <= 2) {
+                                            badNove++;
+                                            if (resultados[i - 9] !== undefined && resultados[i - 9].result <= 2) {
+                                                badDez++;
+                                                if (resultados[i - 10] !== undefined && resultados[i - 10].result <= 2) {
+                                                    badOnze++;
+                                                    if (resultados[i - 11] !== undefined && resultados[i - 11].result <= 2) {
+                                                        badDoze++;
+                                                        if (resultados[i - 12] !== undefined && resultados[i - 12].result <= 2) {
+                                                            badTreze++;
+                                                            if (resultados[i - 13] !== undefined && resultados[i - 13].result <= 2) {
+                                                                badQuatorze++;
+                                                                if (resultados[i - 14] !== undefined && resultados[i - 14].result <= 2) {
+                                                                    badQuinze++;
+                                                                    if (resultados[i - 15] !== undefined && resultados[i - 15].result <= 2) {
+                                                                        badDezesseis++;
+                                                                        if (resultados[i - 16] !== undefined && resultados[i - 16].result <= 2) {
+                                                                            badDezessete++;
+                                                                            if (resultados[i - 17] !== undefined && resultados[i - 17].result <= 2) {
+                                                                                badDezoito++;
+                                                                                if (resultados[i - 18] !== undefined && resultados[i - 18].result <= 2) {
+                                                                                    badDezenove++;
+                                                                                    if (resultados[i - 19] !== undefined && resultados[i - 19].result <= 2) {
+                                                                                        badVinte++;
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
 
-
-        return null;
-    })
-
-    vermelhoSeq.map((e, i) => {
-        if (e === 1) {
-            vermelhoUm++
-        } else if (e === 2) {
-            vermelhoDois++
-        } else if (e === 3) {
-            vermelhoTres++
-        } else if (e === 4) {
-            vermelhoQuatro++
-        } else if (e === 5) {
-            vermelhoCinco++
-        } else if (e === 6) {
-            vermelhoSeis++
-        } else if (e === 7) {
-            vermelhoSete++
-        } else if (e === 8) {
-            vermelhoOito++
-        } else if (e === 9) {
-            vermelhoNove++
-        } else if (e === 10) {
-            vermelhoDez++
-        } else if (e === 11) {
-            vermelhoOnze++
-        } else if (e === 12) {
-            vermelhoDoze++
-        } else if (e === 13) {
-            vermelhoTreze++
-        } else if (e === 14) {
-            vermelhoQuatorze++
-        } else if (e === 15) {
-            vermelhoQuinze++
-        } else if (e === 16) {
-            vermelhoDezesseis++
-        } else if (e === 17) {
-            vermelhoDezessete++
-        } else if (e === 18) {
-            vermelhoDezoito++
-        } else if (e === 19) {
-            vermelhoDezenove++
-        } else if (e === 20) {
-            vermelhoVinte++
-        }
-
-        return null;
-    })
-
-    pretoSeq.map((e, i) => {
-        if (e === 1) {
-            pretoUm++
-        } else if (e === 2) {
-            pretoDois++
-        } else if (e === 3) {
-            pretoTres++
-        } else if (e === 4) {
-            pretoQuatro++
-        } else if (e === 5) {
-            pretoCinco++
-        } else if (e === 6) {
-            pretoSeis++
-        } else if (e === 7) {
-            pretoSete++
-        } else if (e === 8) {
-            pretoOito++
-        } else if (e === 9) {
-            pretoNove++
-        } else if (e === 10) {
-            pretoDez++
-        } else if (e === 11) {
-            pretoOnze++
-        } else if (e === 12) {
-            pretoDoze++
-        } else if (e === 13) {
-            pretoTreze++
-        } else if (e === 14) {
-            pretoQuatorze++
-        } else if (e === 15) {
-            pretoQuinze++
-        } else if (e === 16) {
-            pretoDezesseis++
-        } else if (e === 17) {
-            pretoDezessete++
-        } else if (e === 18) {
-            pretoDezoito++
-        } else if (e === 19) {
-            pretoDezenove++
-        } else if (e === 20) {
-            pretoVinte++
+        if (e.result > 2) {
+            goodUm++
+            if (resultados[i - 1] !== undefined && resultados[i - 1].result > 2) {
+                goodDois++;
+                if (resultados[i - 2] !== undefined && resultados[i - 2].result > 2) {
+                    goodTres++;
+                    if (resultados[i - 3] !== undefined && resultados[i - 3].result > 2) {
+                        goodQuatro++;
+                        if (resultados[i - 4] !== undefined && resultados[i - 4].result > 2) {
+                            goodCinco++;
+                            if (resultados[i - 5] !== undefined && resultados[i - 5].result > 2) {
+                                goodSeis++;
+                                if (resultados[i - 6] !== undefined && resultados[i - 6].result > 2) {
+                                    goodSete++;
+                                    if (resultados[i - 7] !== undefined && resultados[i - 7].result > 2) {
+                                        goodOito++;
+                                        if (resultados[i - 8] !== undefined && resultados[i - 8].result > 2) {
+                                            goodNove++;
+                                            if (resultados[i - 9] !== undefined && resultados[i - 9].result > 2) {
+                                                goodDez++;
+                                                if (resultados[i - 10] !== undefined && resultados[i - 10].result > 2) {
+                                                    goodOnze++;
+                                                    if (resultados[i - 11] !== undefined && resultados[i - 11].result > 2) {
+                                                        goodDoze++;
+                                                        if (resultados[i - 12] !== undefined && resultados[i - 12].result > 2) {
+                                                            goodTreze++;
+                                                            if (resultados[i - 13] !== undefined && resultados[i - 13].result > 2) {
+                                                                goodQuatorze++;
+                                                                if (resultados[i - 14] !== undefined && resultados[i - 14].result > 2) {
+                                                                    goodQuinze++;
+                                                                    if (resultados[i - 15] !== undefined && resultados[i - 15].result > 2) {
+                                                                        goodDezesseis++;
+                                                                        if (resultados[i - 16] !== undefined && resultados[i - 16].result > 2) {
+                                                                            goodDezessete++;
+                                                                            if (resultados[i - 17] !== undefined && resultados[i - 17].result > 2) {
+                                                                                goodDezoito++;
+                                                                                if (resultados[i - 18] !== undefined && resultados[i - 18].result > 2) {
+                                                                                    goodDezenove++;
+                                                                                    if (resultados[i - 19] !== undefined && resultados[i - 19].result > 2) {
+                                                                                        goodVinte++;
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
 
         return null;
@@ -176,54 +178,54 @@ const QuantidadeLossPorCor = ({ resultados }) => {
             <h2>Quantidade de casas sem</h2>
             <div className="cores">
                 <div>
-                    <span className="vermelho">vermelho</span>
+                    <span className="bad">LOSS</span>
                     <div className="cor">
-                        <span className={`valor${vermelhoUm === 0 ? ' zerado' : ''}`}>1: {vermelhoUm}</span>
-                        <span className={`valor${vermelhoDois === 0 ? ' zerado' : ''}`}>2: {vermelhoDois}</span>
-                        <span className={`valor${vermelhoTres === 0 ? ' zerado' : ''}`}>3: {vermelhoTres}</span>
-                        <span className={`valor${vermelhoQuatro === 0 ? ' zerado' : ''}`}>4: {vermelhoQuatro}</span>
-                        <span className={`valor${vermelhoCinco === 0 ? ' zerado' : ''}`}>5: {vermelhoCinco}</span>
-                        <span className={`valor${vermelhoSeis === 0 ? ' zerado' : ''}`}>6: {vermelhoSeis}</span>
-                        <span className={`valor${vermelhoSete === 0 ? ' zerado' : ''}`}>7: {vermelhoSete}</span>
-                        <span className={`valor${vermelhoOito === 0 ? ' zerado' : ''}`}>8: {vermelhoOito}</span>
-                        <span className={`valor${vermelhoNove === 0 ? ' zerado' : ''}`}>9: {vermelhoNove}</span>
-                        <span className={`valor${vermelhoDez === 0 ? ' zerado' : ''}`}>10: {vermelhoDez}</span>
-                        <span className={`valor${vermelhoOnze === 0 ? ' zerado' : ''}`}>11: {vermelhoOnze}</span>
-                        <span className={`valor${vermelhoDoze === 0 ? ' zerado' : ''}`}>12: {vermelhoDoze}</span>
-                        <span className={`valor${vermelhoTreze === 0 ? ' zerado' : ''}`}>13: {vermelhoTreze}</span>
-                        <span className={`valor${vermelhoQuatorze === 0 ? ' zerado' : ''}`}>14: {vermelhoQuatorze}</span>
-                        <span className={`valor${vermelhoQuinze === 0 ? ' zerado' : ''}`}>15: {vermelhoQuinze}</span>
-                        <span className={`valor${vermelhoDezesseis === 0 ? ' zerado' : ''}`}>16: {vermelhoDezesseis}</span>
-                        <span className={`valor${vermelhoDezessete === 0 ? ' zerado' : ''}`}>17: {vermelhoDezessete}</span>
-                        <span className={`valor${vermelhoDezoito === 0 ? ' zerado' : ''}`}>18: {vermelhoDezoito}</span>
-                        <span className={`valor${vermelhoDezenove === 0 ? ' zerado' : ''}`}>19: {vermelhoDezenove}</span>
-                        <span className={`valor${vermelhoVinte === 0 ? ' zerado' : ''}`}>20: {vermelhoVinte}</span>
+                        <span className={`valor${badUm === 0 ? ' zerado' : ''}`}>1: {badUm}</span>
+                        <span className={`valor${badDois === 0 ? ' zerado' : ''}`}>2: {badDois}</span>
+                        <span className={`valor${badTres === 0 ? ' zerado' : ''}`}>3: {badTres}</span>
+                        <span className={`valor${badQuatro === 0 ? ' zerado' : ''}`}>4: {badQuatro}</span>
+                        <span className={`valor${badCinco === 0 ? ' zerado' : ''}`}>5: {badCinco}</span>
+                        <span className={`valor${badSeis === 0 ? ' zerado' : ''}`}>6: {badSeis}</span>
+                        <span className={`valor${badSete === 0 ? ' zerado' : ''}`}>7: {badSete}</span>
+                        <span className={`valor${badOito === 0 ? ' zerado' : ''}`}>8: {badOito}</span>
+                        <span className={`valor${badNove === 0 ? ' zerado' : ''}`}>9: {badNove}</span>
+                        <span className={`valor${badDez === 0 ? ' zerado' : ''}`}>10: {badDez}</span>
+                        <span className={`valor${badOnze === 0 ? ' zerado' : ''}`}>11: {badOnze}</span>
+                        <span className={`valor${badDoze === 0 ? ' zerado' : ''}`}>12: {badDoze}</span>
+                        <span className={`valor${badTreze === 0 ? ' zerado' : ''}`}>13: {badTreze}</span>
+                        <span className={`valor${badQuatorze === 0 ? ' zerado' : ''}`}>14: {badQuatorze}</span>
+                        <span className={`valor${badQuinze === 0 ? ' zerado' : ''}`}>15: {badQuinze}</span>
+                        <span className={`valor${badDezesseis === 0 ? ' zerado' : ''}`}>16: {badDezesseis}</span>
+                        <span className={`valor${badDezessete === 0 ? ' zerado' : ''}`}>17: {badDezessete}</span>
+                        <span className={`valor${badDezoito === 0 ? ' zerado' : ''}`}>18: {badDezoito}</span>
+                        <span className={`valor${badDezenove === 0 ? ' zerado' : ''}`}>19: {badDezenove}</span>
+                        <span className={`valor${badVinte === 0 ? ' zerado' : ''}`}>20: {badVinte}</span>
                     </div>
                 </div>
                 <span className="vl"></span>
                 <div>
-                    <span className="preto">preto</span>
+                    <span className="good">WIN</span>
                     <div className="cor">
-                        <span className={`valor${pretoUm === 0 ? ' zerado' : ''}`}>1: {pretoUm}</span>
-                        <span className={`valor${pretoDois === 0 ? ' zerado' : ''}`}>2: {pretoDois}</span>
-                        <span className={`valor${pretoTres === 0 ? ' zerado' : ''}`}>3: {pretoTres}</span>
-                        <span className={`valor${pretoQuatro === 0 ? ' zerado' : ''}`}>4: {pretoQuatro}</span>
-                        <span className={`valor${pretoCinco === 0 ? ' zerado' : ''}`}>5: {pretoCinco}</span>
-                        <span className={`valor${pretoSeis === 0 ? ' zerado' : ''}`}>6: {pretoSeis}</span>
-                        <span className={`valor${pretoSete === 0 ? ' zerado' : ''}`}>7: {pretoSete}</span>
-                        <span className={`valor${pretoOito === 0 ? ' zerado' : ''}`}>8: {pretoOito}</span>
-                        <span className={`valor${pretoNove === 0 ? ' zerado' : ''}`}>9: {pretoNove}</span>
-                        <span className={`valor${pretoDez === 0 ? ' zerado' : ''}`}>10: {pretoDez}</span>
-                        <span className={`valor${pretoOnze === 0 ? ' zerado' : ''}`}>11: {pretoOnze}</span>
-                        <span className={`valor${pretoDoze === 0 ? ' zerado' : ''}`}>12: {pretoDoze}</span>
-                        <span className={`valor${pretoTreze === 0 ? ' zerado' : ''}`}>13: {pretoTreze}</span>
-                        <span className={`valor${pretoQuatorze === 0 ? ' zerado' : ''}`}>14: {pretoQuatorze}</span>
-                        <span className={`valor${pretoQuinze === 0 ? ' zerado' : ''}`}>15: {pretoQuinze}</span>
-                        <span className={`valor${pretoDezesseis === 0 ? ' zerado' : ''}`}>16: {pretoDezesseis}</span>
-                        <span className={`valor${pretoDezessete === 0 ? ' zerado' : ''}`}>17: {pretoDezessete}</span>
-                        <span className={`valor${pretoDezoito === 0 ? ' zerado' : ''}`}>18: {pretoDezoito}</span>
-                        <span className={`valor${pretoDezenove === 0 ? ' zerado' : ''}`}>19: {pretoDezenove}</span>
-                        <span className={`valor${pretoVinte === 0 ? ' zerado' : ''}`}>20: {pretoVinte}</span>
+                        <span className={`valor${goodUm === 0 ? ' zerado' : ''}`}>1: {goodUm}</span>
+                        <span className={`valor${goodDois === 0 ? ' zerado' : ''}`}>2: {goodDois}</span>
+                        <span className={`valor${goodTres === 0 ? ' zerado' : ''}`}>3: {goodTres}</span>
+                        <span className={`valor${goodQuatro === 0 ? ' zerado' : ''}`}>4: {goodQuatro}</span>
+                        <span className={`valor${goodCinco === 0 ? ' zerado' : ''}`}>5: {goodCinco}</span>
+                        <span className={`valor${goodSeis === 0 ? ' zerado' : ''}`}>6: {goodSeis}</span>
+                        <span className={`valor${goodSete === 0 ? ' zerado' : ''}`}>7: {goodSete}</span>
+                        <span className={`valor${goodOito === 0 ? ' zerado' : ''}`}>8: {goodOito}</span>
+                        <span className={`valor${goodNove === 0 ? ' zerado' : ''}`}>9: {goodNove}</span>
+                        <span className={`valor${goodDez === 0 ? ' zerado' : ''}`}>10: {goodDez}</span>
+                        <span className={`valor${goodOnze === 0 ? ' zerado' : ''}`}>11: {goodOnze}</span>
+                        <span className={`valor${goodDoze === 0 ? ' zerado' : ''}`}>12: {goodDoze}</span>
+                        <span className={`valor${goodTreze === 0 ? ' zerado' : ''}`}>13: {goodTreze}</span>
+                        <span className={`valor${goodQuatorze === 0 ? ' zerado' : ''}`}>14: {goodQuatorze}</span>
+                        <span className={`valor${goodQuinze === 0 ? ' zerado' : ''}`}>15: {goodQuinze}</span>
+                        <span className={`valor${goodDezesseis === 0 ? ' zerado' : ''}`}>16: {goodDezesseis}</span>
+                        <span className={`valor${goodDezessete === 0 ? ' zerado' : ''}`}>17: {goodDezessete}</span>
+                        <span className={`valor${goodDezoito === 0 ? ' zerado' : ''}`}>18: {goodDezoito}</span>
+                        <span className={`valor${goodDezenove === 0 ? ' zerado' : ''}`}>19: {goodDezenove}</span>
+                        <span className={`valor${goodVinte === 0 ? ' zerado' : ''}`}>20: {goodVinte}</span>
                     </div>
                 </div>
             </div>
