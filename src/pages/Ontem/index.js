@@ -20,9 +20,9 @@ export default function App() {
       {
         resultados.length !== 0 ?
           <div className="App">
-            <h1>Ontem - {resultados.length && new Date(dateFromObjectId(resultados[0]._id)).toLocaleDateString('pt-br')}</h1>
+            <h1>ONTEM - {resultados.length && new Date(dateFromObjectId(resultados[0]._id)).toLocaleDateString('pt-br')}</h1>
             <UltimosRoleta resultados={resultados} />
-            <Maximas resultados={resultados} />
+            {/* <Maximas resultados={resultados} /> */}
             <QuantidadeLossPorCor resultados={resultados} />
           </div>
           :
