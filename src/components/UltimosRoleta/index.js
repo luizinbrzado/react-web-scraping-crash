@@ -17,8 +17,6 @@ const UltimosRoleta = ({ resultados }) => {
         return null;
     })
 
-
-
     return (
         <section className="ultimos">
             <h2>Últimos resultados:</h2>
@@ -28,7 +26,7 @@ const UltimosRoleta = ({ resultados }) => {
                         var valor
                         if (i > resultados.length - (18 * linhas - (linhas - 1)))
                             valor = <li data-hover={e.time} className={`resultados ${e.result <= 2 ? 'bad' : 'good'}`
-                            } key={e._id}>{e.result}x</li>
+                            } key={e._id}>{(e.result).toString().length === 3 ? `${e.result}0` : e.result}x</li>
 
                         return valor;
                     })

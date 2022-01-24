@@ -8,7 +8,11 @@ const HorariosPorCasas = ({ array, casas }) => {
             <div className="casas">
                 {
                     array.map((e) => {
-                        return <span key={e.time.concat(e.result)} className="horario">{e.result} às {e.time}</span>
+                        var retornar;
+
+                        typeof e === 'object' && (retornar = <span key={`${e.time + e.result}`} className="horario">{e.result} às {e.time}</span>)
+
+                        return retornar;
                     })
                 }
             </div>

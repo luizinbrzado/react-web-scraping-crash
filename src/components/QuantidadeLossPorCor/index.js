@@ -48,186 +48,122 @@ const QuantidadeLossPorCor = ({ resultados }) => {
     var goodDezenove = 0;
     var goodVinte = 0;
 
+    const arrayBadNove = [];
     const arrayBadDez = [];
     const arrayBadOnze = [];
     const arrayBadDoze = [];
     const arrayBadTreze = [];
     const arrayBadQuatorze = [];
 
+    var arrayX = [];
+    var countLoss = 0;
+    var countWin = 0;
+
     resultados.reverse().map((e, i) => {
         if (e.result <= 2) {
-            (resultados[i + 1] && resultados[i + 1].result > 2 &&
-                resultados[i - 1] && resultados[i - 1].result > 2) && badUm++
-            if (resultados[i + 1] && resultados[i + 1].result <= 2) {
-                (resultados[i + 2] && resultados[i + 2].result > 2 &&
-                    resultados[i - 1] && resultados[i - 1].result > 2) && badDois++
-                if (resultados[i + 2] && resultados[i + 2].result <= 2) {
-                    (resultados[i + 3] && resultados[i + 3].result > 2 &&
-                        resultados[i - 1] && resultados[i - 1].result > 2) && badTres++
-                    if (resultados[i + 3] && resultados[i + 3].result <= 2) {
-                        (resultados[i + 4] && resultados[i + 4].result > 2 &&
-                            resultados[i - 1] && resultados[i - 1].result > 2) && badQuatro++
-                        if (resultados[i + 4] && resultados[i + 4].result <= 2) {
-                            (resultados[i + 5] && resultados[i + 5].result > 2 &&
-                                resultados[i - 1] && resultados[i - 1].result > 2) && badCinco++
-                            if (resultados[i + 5] && resultados[i + 5].result <= 2) {
-                                (resultados[i + 6] && resultados[i + 6].result > 2 &&
-                                    resultados[i - 1] && resultados[i - 1].result > 2) && badSeis++
-                                if (resultados[i + 6] && resultados[i + 6].result <= 2) {
-                                    (resultados[i + 7] && resultados[i + 7].result > 2 &&
-                                        resultados[i - 1] && resultados[i - 1].result > 2) && badSete++
-                                    if (resultados[i + 7] && resultados[i + 7].result <= 2) {
-                                        (resultados[i + 8] && resultados[i + 8].result > 2 &&
-                                            resultados[i - 1] && resultados[i - 1].result > 2) && badOito++
-                                        if (resultados[i + 8] && resultados[i + 8].result <= 2) {
-                                            (resultados[i + 9] && resultados[i + 9].result > 2 &&
-                                                resultados[i - 1] && resultados[i - 1].result > 2) && badNove++
-                                            if (resultados[i + 9] && resultados[i + 9].result <= 2) {
-                                                if (resultados[i + 10] && resultados[i + 10].result > 2 &&
-                                                    resultados[i - 1] && resultados[i - 1].result > 2) {
-                                                    badDez++
-                                                    arrayBadDez.unshift({ time: resultados[i + 9].time, result: resultados[i + 9].result })
-                                                }
-                                                if (resultados[i + 10] && resultados[i + 10].result <= 2) {
-                                                    if (resultados[i + 11] && resultados[i + 11].result > 2 &&
-                                                        resultados[i - 1] && resultados[i - 1].result > 2) {
-                                                        badOnze++
-                                                        arrayBadOnze.unshift({ time: resultados[i + 10].time, result: resultados[i + 10].result })
-                                                    }
-                                                    if (resultados[i + 11] && resultados[i + 11].result <= 2) {
-                                                        if (resultados[i + 12] && resultados[i + 12].result > 2 &&
-                                                            resultados[i - 1] && resultados[i - 1].result > 2) {
-                                                            badDoze++
-                                                            arrayBadDoze.unshift({ time: resultados[i + 11].time, result: resultados[i + 11].result })
-                                                        }
-                                                        if (resultados[i + 12] && resultados[i + 12].result <= 2) {
-                                                            if (resultados[i + 13] && resultados[i + 13].result > 2 &&
-                                                                resultados[i - 1] && resultados[i - 1].result > 2) {
-                                                                badTreze++
-                                                                arrayBadTreze.unshift({ time: resultados[i + 12].time, result: resultados[i + 12].result })
-                                                            }
-                                                            if (resultados[i + 13] && resultados[i + 13].result <= 2) {
-                                                                if (resultados[i + 14] && resultados[i + 14].result > 2 &&
-                                                                    resultados[i - 1] && resultados[i - 1].result > 2) {
-                                                                    badQuatorze++
-                                                                    arrayBadQuatorze.unshift({ time: resultados[i + 13].time, result: resultados[i + 13].result })
-                                                                }
-                                                                if (resultados[i + 14] && resultados[i + 14].result <= 2) {
-                                                                    (resultados[i + 15] && resultados[i + 15].result > 2 &&
-                                                                        resultados[i - 1] && resultados[i - 1].result > 2) && badQuinze++
-                                                                    if (resultados[i + 15] && resultados[i + 15].result <= 2) {
-                                                                        (resultados[i + 16] && resultados[i + 16].result > 2 &&
-                                                                            resultados[i - 1] && resultados[i - 1].result > 2) && badDezesseis++
-                                                                        if (resultados[i + 16] && resultados[i + 16].result <= 2) {
-                                                                            (resultados[i + 17] && resultados[i + 17].result > 2 &&
-                                                                                resultados[i - 1] && resultados[i - 1].result > 2) && badDezessete++
-                                                                            if (resultados[i + 17] && resultados[i + 17].result <= 2) {
-                                                                                (resultados[i + 18] && resultados[i + 18].result > 2 &&
-                                                                                    resultados[i - 1] && resultados[i - 1].result > 2) && badDezoito++
-                                                                                if (resultados[i + 18] && resultados[i + 18].result <= 2) {
-                                                                                    (resultados[i + 19] && resultados[i + 19].result > 2 &&
-                                                                                        resultados[i - 1] && resultados[i - 1].result > 2) && badDezenove++
-                                                                                    if (resultados[i + 19] && resultados[i + 19].result <= 2) {
-                                                                                        badVinte++
-                                                                                    }
-                                                                                }
-                                                                            }
-                                                                        }
-                                                                    }
-                                                                }
-                                                            }
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
+            countLoss++;
+        } else {
+            arrayX.unshift(countLoss);
+
+            if (countLoss === 1) {
+                badUm++;
+            } else if (countLoss === 2) {
+                badDois++;
+            } else if (countLoss === 3) {
+                badTres++;
+            } else if (countLoss === 4) {
+                badQuatro++;
+            } else if (countLoss === 5) {
+                badCinco++;
+            } else if (countLoss === 6) {
+                badSeis++;
+            } else if (countLoss === 7) {
+                badSete++;
+            } else if (countLoss === 8) {
+                badOito++;
+            } else if (countLoss === 9) {
+                arrayBadNove.unshift(arrayBadNove.unshift({ time: resultados[i - 1].time, result: resultados[i - 1].result }));
+                badNove++;
+            } else if (countLoss === 10) {
+                arrayBadDez.unshift(arrayBadDez.unshift({ time: resultados[i - 1].time, result: resultados[i - 1].result }));
+                badDez++;
+            } else if (countLoss === 11) {
+                arrayBadOnze.unshift(arrayBadOnze.unshift({ time: resultados[i - 1].time, result: resultados[i - 1].result }));
+                badOnze++;
+            } else if (countLoss === 12) {
+                arrayBadDoze.unshift(arrayBadDoze.unshift({ time: resultados[i - 1].time, result: resultados[i - 1].result }));
+                badDoze++;
+            } else if (countLoss === 13) {
+                arrayBadTreze.unshift(arrayBadTreze.unshift({ time: resultados[i - 1].time, result: resultados[i - 1].result }));
+                badTreze++;
+            } else if (countLoss === 14) {
+                arrayBadQuatorze.unshift(arrayBadQuatorze.unshift({ time: resultados[i - 1].time, result: resultados[i - 1].result }));
+                badQuatorze++;
+            } else if (countLoss === 15) {
+                badQuinze++;
+            } else if (countLoss === 16) {
+                badDezesseis++;
+            } else if (countLoss === 17) {
+                badDezessete++;
+            } else if (countLoss === 18) {
+                badDezoito++;
+            } else if (countLoss === 19) {
+                badDezenove++;
+            } else if (countLoss >= 20) {
+                badVinte++;
             }
+
+            countLoss = 0;
         }
 
         if (e.result > 2) {
-            (resultados[i + 1] && resultados[i + 1].result <= 2 &&
-                resultados[i - 1] && resultados[i - 1].result <= 2) && goodUm++
-            if (resultados[i + 1] && resultados[i + 1].result > 2) {
-                (resultados[i + 2] && resultados[i + 2].result <= 2 &&
-                    resultados[i - 1] && resultados[i - 1].result <= 2) && goodDois++
-                if (resultados[i + 2] && resultados[i + 2].result > 2) {
-                    (resultados[i + 3] && resultados[i + 3].result <= 2 &&
-                        resultados[i - 1] && resultados[i - 1].result <= 2) && goodTres++
-                    if (resultados[i + 3] && resultados[i + 3].result > 2) {
-                        (resultados[i + 4] && resultados[i + 4].result <= 2 &&
-                            resultados[i - 1] && resultados[i - 1].result <= 2) && goodQuatro++
-                        if (resultados[i + 4] && resultados[i + 4].result > 2) {
-                            (resultados[i + 5] && resultados[i + 5].result <= 2 &&
-                                resultados[i - 1] && resultados[i - 1].result <= 2) && goodCinco++
-                            if (resultados[i + 5] && resultados[i + 5].result > 2) {
-                                (resultados[i + 6] && resultados[i + 6].result <= 2 &&
-                                    resultados[i - 1] && resultados[i - 1].result <= 2) && goodSeis++
-                                if (resultados[i + 6] && resultados[i + 6].result > 2) {
-                                    (resultados[i + 7] && resultados[i + 7].result <= 2 &&
-                                        resultados[i - 1] && resultados[i - 1].result <= 2) && goodSete++
-                                    if (resultados[i + 7] && resultados[i + 7].result > 2) {
-                                        (resultados[i + 8] && resultados[i + 8].result <= 2 &&
-                                            resultados[i - 1] && resultados[i - 1].result <= 2) && goodOito++
-                                        if (resultados[i + 8] && resultados[i + 8].result > 2) {
-                                            (resultados[i + 9] && resultados[i + 9].result <= 2 &&
-                                                resultados[i - 1] && resultados[i - 1].result <= 2) && goodNove++
-                                            if (resultados[i + 9] && resultados[i + 9].result > 2) {
-                                                (resultados[i + 10] && resultados[i + 10].result <= 2 &&
-                                                    resultados[i - 1] && resultados[i - 1].result <= 2) && goodDez++
-                                                if (resultados[i + 10] && resultados[i + 10].result > 2) {
-                                                    (resultados[i + 11] && resultados[i + 11].result <= 2 &&
-                                                        resultados[i - 1] && resultados[i - 1].result <= 2) && goodOnze++
-                                                    if (resultados[i + 11] && resultados[i + 11].result > 2) {
-                                                        (resultados[i + 12] && resultados[i + 12].result <= 2 &&
-                                                            resultados[i - 1] && resultados[i - 1].result <= 2) && goodDoze++
-                                                        if (resultados[i + 12] && resultados[i + 12].result > 2) {
-                                                            (resultados[i + 13] && resultados[i + 13].result <= 2 &&
-                                                                resultados[i - 1] && resultados[i - 1].result <= 2) && goodTreze++
-                                                            if (resultados[i + 13] && resultados[i + 13].result > 2) {
-                                                                (resultados[i + 14] && resultados[i + 14].result <= 2 &&
-                                                                    resultados[i - 1] && resultados[i - 1].result <= 2) && goodQuatorze++
-                                                                if (resultados[i + 14] && resultados[i + 14].result > 2) {
-                                                                    (resultados[i + 15] && resultados[i + 15].result <= 2 &&
-                                                                        resultados[i - 1] && resultados[i - 1].result <= 2) && goodQuinze++
-                                                                    if (resultados[i + 15] && resultados[i + 15].result > 2) {
-                                                                        (resultados[i + 16] && resultados[i + 16].result <= 2 &&
-                                                                            resultados[i - 1] && resultados[i - 1].result <= 2) && goodDezesseis++
-                                                                        if (resultados[i + 16] && resultados[i + 16].result > 2) {
-                                                                            (resultados[i + 17] && resultados[i + 17].result <= 2 &&
-                                                                                resultados[i - 1] && resultados[i - 1].result <= 2) && goodDezessete++
-                                                                            if (resultados[i + 17] && resultados[i + 17].result > 2) {
-                                                                                (resultados[i + 18] && resultados[i + 18].result <= 2 &&
-                                                                                    resultados[i - 1] && resultados[i - 1].result <= 2) && goodDezoito++
-                                                                                if (resultados[i + 18] && resultados[i + 18].result > 2) {
-                                                                                    (resultados[i + 19] && resultados[i + 19].result <= 2 &&
-                                                                                        resultados[i - 1] && resultados[i - 1].result <= 2) && goodDezenove++
-                                                                                    if (resultados[i + 19] && resultados[i + 19].result > 2) {
-                                                                                        goodVinte++
-                                                                                    }
-                                                                                }
-                                                                            }
-                                                                        }
-                                                                    }
-                                                                }
-                                                            }
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
+            countWin++;
+        } else {
+            arrayX.unshift(countWin);
+
+            if (countWin === 1) {
+                goodUm++;
+            } else if (countWin === 2) {
+                goodDois++;
+            } else if (countWin === 3) {
+                goodTres++;
+            } else if (countWin === 4) {
+                goodQuatro++;
+            } else if (countWin === 5) {
+                goodCinco++;
+            } else if (countWin === 6) {
+                goodSeis++;
+            } else if (countWin === 7) {
+                goodSete++;
+            } else if (countWin === 8) {
+                goodOito++;
+            } else if (countWin === 9) {
+                goodNove++;
+            } else if (countWin === 10) {
+                goodDez++;
+            } else if (countWin === 11) {
+                goodOnze++;
+            } else if (countWin === 12) {
+                goodDoze++;
+            } else if (countWin === 13) {
+                goodTreze++;
+            } else if (countWin === 14) {
+                goodQuatorze++;
+            } else if (countWin === 15) {
+                goodQuinze++;
+            } else if (countWin === 16) {
+                goodDezesseis++;
+            } else if (countWin === 17) {
+                goodDezessete++;
+            } else if (countWin === 18) {
+                goodDezoito++;
+            } else if (countWin === 19) {
+                goodDezenove++;
+            } else if (countWin >= 20) {
+                goodVinte++;
             }
+
+            countWin = 0;
         }
 
         return null;
@@ -291,6 +227,9 @@ const QuantidadeLossPorCor = ({ resultados }) => {
                     </div>
                 </div>
                 <div className="loss-horarios">
+                    {
+                        arrayBadNove[0] !== undefined && <HorariosPorCasas array={arrayBadNove} casas={'9'} />
+                    }
                     {
                         arrayBadDez[0] !== undefined && <HorariosPorCasas array={arrayBadDez} casas={'10'} />
                     }
